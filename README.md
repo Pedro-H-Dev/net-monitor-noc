@@ -97,7 +97,7 @@ net-monitor-noc/
 
 ---
 
-## 🧑‍💻 Autor
+## 👨‍💻 Autor
 
 Desenvolvido por **Pedro Henrique**
 
