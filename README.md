@@ -15,7 +15,7 @@ Uma aplicação Full Stack corporativa para monitoramento de ativos de rede em t
 - [Funcionalidades](#-funcionalidades)
 - [Arquitetura & Tecnologias](#-arquitetura--tecnologias)
 - [Estrutura do Projeto](#-estrutura-do-projeto)
-- [Como Executar](#-como-executar)
+- [Como Executar o Projeto](#-como-executar-o-projeto)
 - [Endpoints da API](#-endpoints-da-api)
 - [Autor](#-autor)
 
@@ -55,40 +55,34 @@ O **NETMON NOC** foi desenvolvido para simular o ambiente de um Centro de Opera�
 ```text
 net-monitor-noc/
 ├── backend/
-│   ├── app.py
-│   └── requirements.txt
+│   ├── app.py                # Servidor Flask e rotas da API ICMP
+│   └── requirements.txt      # Dependências do Python (Flask, CORS)
 ├── frontend/
-│   ├── index.html
-│   ├── style.css
-│   └── app.js
+│   ├── index.html            # Estrutura do Painel Dashboard NOC
+│   ├── style.css             # Estilização Cyber-Dark/Glassmorphism
+│   └── app.js                # Consumo de API e gráficos Chart.js
 ├── .gitignore
 └── README.md
 ```
 
 ---
 
-## 🚀 Como Executar
+## 💻 Como Executar o Projeto
 
 ### Pré-requisitos
-- **Python 3.x** instalado.
-- Navegador moderno (Chrome, Edge, Firefox, etc.).
 
-### 1. Clonar o Repositório
-```bash
-git clone [https://github.com/Pedro-H-Dev/net-monitor-noc.git](https://github.com/Pedro-H-Dev/net-monitor-noc.git)
-cd net-monitor-noc
-```
+* **Python 3.x** instalado.
+* **Git** instalado.
 
-### 2. Configurar e Iniciar o Backend
-```bash
-cd backend
-pip install -r requirements.txt
-python app.py
-```
-> O servidor iniciará em `http://127.0.0.1:5000`.
+### Passo a Passo
 
-### 3. Executar o Frontend
-Basta abrir o arquivo `frontend/index.html` diretamente no seu navegador de preferência ou utilizar a extensão **Live Server** no VS Code.
+1. **Clonar o repositório:** `git clone https://github.com/Pedro-H-Dev/net-monitor-noc.git`
+
+2. **Acessar o diretório do projeto:** `cd net-monitor-noc`
+
+3. **Iniciar o backend Python:** `cd backend` && `pip install -r requirements.txt` && `python app.py`
+
+4. **Executar a aplicação:** Abra o arquivo `frontend/index.html` em qualquer navegador.
 
 ---
 
@@ -103,19 +97,9 @@ Basta abrir o arquivo `frontend/index.html` diretamente no seu navegador de pref
 
 ---
 
-## 👨‍💻 Autor
+## 🧑‍💻 Autor
 
-Desenvolvido por **Pedro Henrique**.
+Desenvolvido por **Pedro Henrique**
 
-- **GitHub:** [@Pedro-H-Dev](https://github.com/Pedro-H-Dev)
-- **LinkedIn:** [pedro-h-devv](https://linkedin.com/in/pedro-h-devv)
-
----
-
-## 📤 Comandos Git para Envio da Documentação
-
-Para salvar a documentação no projeto e subir para o GitHub, execute no terminal do VS Code:
-
-git add README.md
-git commit -m "docs: atualiza README.md com estrutura completa de documentacao"
-git push
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/pedro-h-devv)
+[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Pedro-H-Dev)
