@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NETMON // Enterprise NOC Operations Center</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+  <div class="app-container">
+    <header class="topbar">
+      <div class="brand">
+        <div class="logo-box"><i class="ph-bold ph-shield-checkered"></i></div>
+        <div>
+          <h1>NETMON <span>NOC v2.4</span></h1>
+          <p class="subtitle">Infra & Network Monitoring Suite</p>
+        </div>
+      </div>
+      <div class="header-actions">
+        <button class="btn-primary" id="btn-open-modal"><i class="ph-bold ph-plus-circle"></i> Novo Ativo</button>
+        <div class="system-status">
+          <span class="pulse-ring green"></span>
+          <span class="status-text">LIVE STREAM</span>
+          <span class="clock" id="live-clock">00:00:00</span>
+        </div>
+      </div>
+    </header>
+
+    <section class="kpi-grid">
+      <div class="card kpi">
+        <div class="kpi-icon green"><i class="ph-bold ph-check-circle"></i></div>
+        <div class="kpi-info">
+          <h3>Ativos Operacionais</h3>
+          <span class="number" id="online-count">0</span>
+        </div>
+      </div>
+      <div class="card kpi">
+        <div class="kpi-icon red"><i class="ph-bold ph-warning-octagon"></i></div>
+        <div class="kpi-info">
+          <h3>Incidentes Críticos</h3>
+          <span class="number" id="offline-count">0</span>
+        </div>
+      </div>
+      <div class="card kpi">
+        <div class="kpi-icon blue"><i class="ph-bold ph-lightning"></i></div>
+        <div class="kpi-info">
+          <h3>Latência Global</h3>
+          <span class="number" id="avg-latency">0 ms</span>
+        </div>
+      </div>
+      <div class="card kpi">
+        <div class="kpi-icon purple"><i class="ph-bold ph-chart-line-up"></i></div>
+        <div class="kpi-info">
+          <h3>SLA / Uptime</h3>
+          <span class="number">99.8%</span>
+        </div>
+      </div>
+    </section>
+
+    <main class="main-content">
+      <section class="card assets-section">
+        <div class="card-header">
+          <div>
+            <h2><i class="ph-bold ph-hard-drives"></i> Ativos Monitorados</h2>
+            <p class="section-desc">Status do inventário de rede em tempo real</p>
+          </div>
+          <div class="filter-group">
+            <input type="text" id="search-input" placeholder="Buscar por host ou IP..." class="input-search">
+            <button class="btn-secondary" id="btn-refresh"><i class="ph-bold ph-arrows-clockwise"></i> Recarregar</button>
+          </div>
+        </div>
+
+        <div class="table-wrapper">
+          <table class="assets-table">
+            <thead>
+              <tr>
+                <th>HOST / IP</th>
+                <th>TIPO</th>
+                <th>STATUS</th>
+                <th>LATÊNCIA</th>
+                <th>AÇÕES</th>
+              </tr>
+            </thead>
+            <tbody id="assets-list"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <div class="side-panel">
+        <section class="card chart-section">
+          <div class="card-header">
+            <h2><i class="ph-bold ph-activity"></i> Telemetria (ms)</h2>
+          </div>
+          <div class="chart-container">
+            <canvas id="latencyChart"></canvas>
+          </div>
+        </section>
+
+        <section class="card console-section">
+          <div class="card-header">
+            <h2><i class="ph-bold ph-terminal-window"></i> Output do Terminal</h2>
+            <button class="btn-text" id="btn-clear-console">Limpar</button>
+          </div>
+          <div class="console-body" id="console-output">
+            <p class="log-info">[SYSTEM] NETMON NOC carregado com sucesso.</p>
+            <p class="log-info">[SOCKET] Conectado ao serviço de telemetria.</p>
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <div class="modal-backdrop" id="modal-add">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3><i class="ph-bold ph-plus-circle"></i> Adicionar Ativo</h3>
+        <button class="modal-close" id="btn-close-modal">&times;</button>
+      </div>
+      <form id="form-add-asset" class="modal-form">
+        <div class="input-field">
+          <label>Nome do Host</label>
+          <input type="text" id="host-name" placeholder="Ex: Firewall Borda SRV-01" required>
+        </div>
+        <div class="input-field">
+          <label>Endereço IP</label>
+          <input type="text" id="host-ip" placeholder="Ex: 192.168.1.254" required>
+        </div>
+        <div class="input-field">
+          <label>Tipo de Dispositivo</label>
+          <select id="host-type">
+            <option value="Roteador">Roteador</option>
+            <option value="Switch">Switch</option>
+            <option value="Servidor">Servidor</option>
+            <option value="Database">Database</option>
+            <option value="Firewall">Firewall</option>
+          </select>
+        </div>
+        <button type="submit" class="btn-primary btn-full">Salvar Ativo</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
