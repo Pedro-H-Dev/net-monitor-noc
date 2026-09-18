@@ -57,7 +57,6 @@ net-monitor-noc/
 ├── backend/
 │   ├── app.py                # Servidor Flask e rotas da API ICMP
 │   └── requirements.txt      # Dependências do Python (Flask, CORS)
-├── frontend/
 │   ├── index.html            # Estrutura do Painel Dashboard NOC
 │   ├── style.css             # Estilização Cyber-Dark/Glassmorphism
 │   └── app.js                # Consumo de API e gráficos Chart.js
@@ -82,7 +81,7 @@ net-monitor-noc/
 
 3. **Iniciar o backend Python:** `cd backend` && `pip install -r requirements.txt` && `python app.py`
 
-4. **Executar a aplicação:** Abra o arquivo `frontend/index.html` em qualquer navegador.
+4. **Executar a aplicação:** Abra o arquivo `index.html` em qualquer navegador.
 
 ---
 
