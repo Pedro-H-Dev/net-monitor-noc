@@ -25,9 +25,8 @@ Uma aplicação Full Stack corporativa para monitoramento de ativos de rede em t
 
 O **NETMON NOC** foi desenvolvido para simular o ambiente de um Centro de Operações de Rede (NOC). A aplicação permite cadastrar, filtrar, testar e remover ativos de rede, entregando métricas de disponibilidade, gráficos de latência em tempo real e um terminal de logs interativo.
 
-![Demonstração NOC](https://github.com/user-attachments/assets/42f90025-2f67-483a-bb64-ce515194f5b1) 
+<img width="400" height="209" alt="Transição para TI com Projetos - Google Gemini - Brave 2026-09-17 22-53-09 - Trim (online-video-cutter com)" src="https://github.com/user-attachments/assets/7c4d28ec-9ae0-4700-897f-c1800b928f49" />
 
-![Demonstração NOC](<img width="400" height="209" alt="Transição para TI com Projetos - Google Gemini - Brave 2026-09-17 22-53-09 - Trim (online-video-cutter com)" src="https://github.com/user-attachments/assets/33c9790e-ac36-40d5-ad14-6f566dffbebe" />)
 ---
 
 ## ⚡ Funcionalidades
@@ -105,3 +104,6 @@ Desenvolvido por **Pedro Henrique**
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/pedro-h-devv)
 [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Pedro-H-Dev)
+
+
+https://github.com/user-attachments/assets/7018c0cf-4dfe-4597-a379-1058625990a9
