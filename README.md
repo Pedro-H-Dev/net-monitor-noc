@@ -9,18 +9,6 @@ Uma aplicação Full Stack corporativa para monitoramento de ativos de rede em t
 
 ---
 
-## 📌 Sumário
-
-- [Visão Geral](#-visão-geral)
-- [Funcionalidades](#-funcionalidades)
-- [Arquitetura & Tecnologias](#-arquitetura--tecnologias)
-- [Estrutura do Projeto](#-estrutura-do-projeto)
-- [Como Executar o Projeto](#-como-executar-o-projeto)
-- [Endpoints da API](#-endpoints-da-api)
-- [Autor](#-autor)
-
----
-
 ## 💻 Visão Geral
 
 O **NETMON NOC** foi desenvolvido para simular o ambiente de um Centro de Operações de Rede (NOC). A aplicação permite cadastrar, filtrar, testar e remover ativos de rede, entregando métricas de disponibilidade, gráficos de latência em tempo real e um terminal de logs interativo.
